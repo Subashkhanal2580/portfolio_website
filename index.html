@@ -112,6 +112,42 @@
   transform: scale(1.1);
 }
 
+
+.ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0{
+	margin-right: 40px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px; /* Adjust spacing between the button and the icons */
+}
+
+.social-icons ul {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-icons .normal-txt {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.social-icons ul li {
+  margin-right: 10px;
+}
+
+form + .social-icons {
+  position: relative;
+  right: 80%; /* Adjust this value to move the icons to the left or right */
+}
+
+
 /* Contact form styles */
 .contact-form {
   display: flex;
@@ -140,6 +176,62 @@
 .contact-form button:hover {
   background-color: #0056b3;
 }
+
+.social-section {
+  display: flex;
+  justify-content: flex-end; /* Align the entire section to the right */
+  align-items: center; /* Vertically align the text and icons */
+  margin-right: 30px; /* Adjust this value to move both the text and icons horizontally */
+}
+
+.social-section .normal-txt {
+  margin-right: 15px; /* Adds space between the "Find me on" text and the icons */
+  font-size: 16px;
+  color: #fff;
+}
+
+.ftco-footer-social {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.ftco-footer-social li {
+  margin-left: 10px; /* Adds spacing between icons */
+}
+
+.ftco-footer-social li a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #222; /* Background for the icons */
+  color: #ffbd39; /* Icon color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ftco-footer-social li a:hover {
+  background-color: #ffbd39; /* Change background color on hover */
+  color: #222; /* Change icon color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </style>
@@ -505,7 +597,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
 						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<div class="heading"> <h4> I love to solve real life problems &amp; uncover hidden data stories </h4>
 						<br>
 						<p><a href="https://github.com/Reddevil2580" class="btn btn-primary py-3 px-5">GitHub</a></p>
 						</div>
@@ -584,8 +676,18 @@
 					<p id="status-message"></p>
 				  </div>
 				</div>
-			  </div>
 			</div>
+			<br>
+			<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+				<li class="ftco-animate normal-txt"> <strong> Find me on   </strong></li>
+				<li class="ftco-animate"><a href="https://www.linkedin.com/in/subash-khanal-004521211/"><span class="icon-linkedin"></span></a></li>  
+				<li class="ftco-animate"><a href="https://github.com/Reddevil2580"><span class="icon-github"></span></a></li>
+				<li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100059367266665"><span class="icon-facebook"></span></a></li>
+				<li class="ftco-animate"><a href="https://www.instagram.com/itsnotsubash"><span class="icon-instagram"></span></a></li>
+			</ul>
+		<br>
+		</div>
+		<div class="underline"></div>
 		  </section>
 
 <!-- Add JavaScript at the End of Body -->
@@ -623,16 +725,10 @@
 </script>
 
 
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/subash-khanal-004521211/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://github.com/Reddevil2580"><span class="icon-github"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100059367266665"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/itsnotsubash"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
+
+
+
+
    </div>
  </section>
 
