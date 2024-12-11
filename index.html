@@ -147,6 +147,21 @@ form + .social-icons {
   right: 80%; /* Adjust this value to move the icons to the left or right */
 }
 
+.btn-primary {
+  background-color: #007bff; /* Default blue background */
+  color: #fff; /* Default white text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.btn-primary:hover {
+  background-color: #fff; /* White background on hover */
+  color: #007bff; /* Blue text on hover */
+}
+
+.btn-primary:active {
+  background-color: #f0f0f0; /* Slightly darker white when clicked */
+  color: #0056b3; /* Darker blue text when clicked */
+}
 
 /* Contact form styles */
 .contact-form {
@@ -426,11 +441,16 @@ form + .social-icons {
     <section class="ftco-section ftco-no-pb" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
+            <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
             <p>Aspiring Data Scientist with hands-on experience in leveraging data to solve real-world problems. Proficient in data analysis, machine learning, and statistical modeling, with a strong foundation in Python, SQL, and visualization tools. Experienced in delivering impactful projects, including a heart disease prediction system and a local news aggregator for Zambia. A motivated professional committed to continuous learning and driving meaningful insights through data.</p>
-          </div>
+            </div>
+		<div class="row justify-content-center mt-5">
+		 <div class="col-md-6 text-center ftco-animate">
+			<p><a href="Subash_khanal_resume_updated.pdf" class="btn btn-primary py-4 px-5" target="_blank">Download Resume</a></p>
+		</div>
+		</div>
         </div>
 
 		<div class="row">
@@ -503,11 +523,7 @@ form + .social-icons {
 				</div>
     		</div>
 
-    		<div class="row justify-content-center mt-5">
-				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="subash_khanal_resume.pdf" class="btn btn-primary py-4 px-5" target="_blank">Download Resume</a></p>
-				</div>
-			</div>
+    		
 			
     </section>
 
