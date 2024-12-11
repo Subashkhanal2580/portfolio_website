@@ -112,6 +112,34 @@
   transform: scale(1.1);
 }
 
+/* Contact form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #0056b3;
+}
 
 
 </style>
@@ -194,7 +222,6 @@
 			            <h2>An undergrad at Kathmandu University</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
-			            <p><a href="https://github.com/reddevil2580" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -534,18 +561,68 @@
           			<span class="icon-github"></span>
           		</div>
           		<h3 class="mb-4">GitHub</h3>
-	            <p>Reddevil2580</p>
+	            <p><strong>Reddevil2580</strong></p>
 	          </div>
           </div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
+		  <!--Contact Form-->
+
+		  
+		  <section id="contact-section">
+			<div class="container">
+			  <div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/6g5WPFMdKXw5MKMj7" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				  <h2>Have a <span>Question?</span></h2>
+				  <div class="contact-form">
+					<form id="contact-form" method="POST">
+					  <input type="text" id="name" name="name" placeholder="Your Name" required>
+					  <input type="email" id="email" name="email" placeholder="Your Email" required>
+					  <input type="text" id="subject" name="subject" placeholder="Subject" required>
+					  <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+					  <button type="submit">Send Message</button>
+					</form>
+					<p id="status-message"></p>
+				  </div>
 				</div>
+			  </div>
 			</div>
+		  </section>
+
+<!-- Add JavaScript at the End of Body -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS
+    (function() {
+        emailjs.init("YdOneevg6iVzyxnOc"); // Replace with your EmailJS user ID
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Collect form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        // Use EmailJS to send the email
+        emailjs.send("service_ty06fmb", "template_k0ln1gy", {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+        })
+        .then(function(response) {
+            document.getElementById("status-message").textContent = "Message sent successfully!";
+        })
+        .catch(function(error) {
+            document.getElementById("status-message").textContent = "Failed to send message. Please try again.";
+            console.error("Error:", error);
+        });
+    });
+</script>
+
+
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
@@ -594,6 +671,8 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     
   </body>
 </html>
